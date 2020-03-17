@@ -1,0 +1,16 @@
+.Header {
+  background: #5bc0be;
+}
+.Header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 2vw;
+}
+.Header-sections {
+  margin-left: 16vw;
+}
+.Header-title {
+  font-family: 'Bellota', cursive;
+  font-size: 3rem;
+}

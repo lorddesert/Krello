@@ -1,0 +1,22 @@
+ul {
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+}
+.Body, body {
+  background: #87d1cf;
+}
+.Body ul li {
+  height: 70vh;
+  font-size: 1rem;
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  color: #efefef;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 7px;
+  text-align: center;
+  padding: 2em;
+  margin: 1em;
+}
+li h2 {
+  font-size: 1.5em;
+}
