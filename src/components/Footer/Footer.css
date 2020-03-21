@@ -1,9 +1,10 @@
 .Footer {
-  background: #0b132b;
-  color: #efefef;
+  background: #00171f;
+  color: #fff;
   font-family: 'Lato', sans-serif;
   padding: 5px;
   font-size: 1.2rem;
+  padding: 2.5vh;
 }
 .Footer-container {
   display: flex;

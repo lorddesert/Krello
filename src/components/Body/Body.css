@@ -1,17 +1,43 @@
-ul {
+@import url('https://fonts.googleapis.com/css?family=Lato|Lobster&display=swap');
+body {
+  color: #000;
+  background: radial-gradient(#fafafa, #f7f7f7);
+}
+a {
+  color: #00a8e8;
+}
+.Body, .Body-content,.Body-log{
+  height: 100%;
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  overflow: auto;
+}
+.Body-content {
+  display: flex;
+  flex-direction: row;
+}
+.Body-log {
+  flex: 1
+}
+.Body-itemInfo {
+  flex: 4.9;
+  padding: .5em
+}
+
+/* ul {
   justify-content: space-evenly;
   display: flex;
   flex-wrap: wrap;
 }
 .Body, body {
-  background: #87d1cf;
+  background: #efefef;
 }
 .Body ul li {
   height: 70vh;
   font-size: 1rem;
   font-family: 'Lato', Arial, Helvetica, sans-serif;
-  color: #efefef;
-  background: rgba(0, 0, 0, 0.8);
+  color: #00171f;
+  background: rgba(255, 255, 255, .9);
+  border: 4px solid #666666;
   border-radius: 7px;
   text-align: center;
   padding: 2em;
@@ -19,4 +45,4 @@ ul {
 }
 li h2 {
   font-size: 1.5em;
-}
+} */

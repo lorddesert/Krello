@@ -10,9 +10,21 @@ const Header = () => {
         </div>
         <div className='Header-sections'>
           <ul>
-            <li>Tablero</li>
-            <li>Opciones</li>
-            <li>Login?</li>
+            <li>
+              <div>
+                Tablero
+              </div>
+            </li>
+            <li>
+              <div>
+                Tablero
+              </div>
+            </li>
+            <li>
+              <div>
+                Tablero
+              </div>
+            </li>
           </ul>
         </div>
       </div>

@@ -1,0 +1,82 @@
+.Body-log {
+  /* margin: .5em; */
+  background: #e8e8e8;
+  border-right: 3px solid #666666;
+}
+.Log {
+  overflow: auto;
+  margin: .5em 0;
+  padding: .5em;
+  color: #00171f;
+}
+.Log-items {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.Log-item-title {
+  flex: 1;
+}
+.Log-item li {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select:none;
+  display: flex;
+  flex-direction: row;
+  padding: .5em;
+  border-bottom: 3px #999999 solid;
+}
+.Log-item li:hover {
+  background: #c3c3c3;
+}
+.Log-item-id {
+  font-weight: bold;
+  padding: 0 .5em;
+  display: flex;
+  justify-content: center;
+}
+.Log-item-id img {
+  /* width: 10px;
+  height: 10px; */
+  padding: .3em .5em 0 0;
+}
+.Log-addItem {
+  display: flex;
+}
+.addItem-input {
+  flex: 2;
+  padding: .3em;
+  margin-right: .2em;
+}
+.addItem-input input {
+  border: none;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  padding: .5em .1em;
+}
+
+.addItem-btn, .addItem-btn button {
+  flex: 1;
+  margin: auto;
+  padding: .3em;
+ 
+}
+.addItem-btn button {
+  width: 100%;
+  border-radius: 15px;
+  background: #efefef;
+  border: 3px #666 solid;
+  cursor: pointer;
+}
+.addItem-btn button:hover {
+  background: #c3c3c3;
+}
+
+@media(max-width: 780px) {
+  .Body-log {
+    display: none;
+  }
+}
