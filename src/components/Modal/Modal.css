@@ -1,0 +1,35 @@
+.Modal {
+  position: relative;
+}
+.Modal-wrapper {
+  transition: all 0.4s;
+  position: absolute;
+  z-index: 8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-100vh);
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.Modal-wrapper span {
+  padding: .5em;
+  background: #ef7245;
+}
+.Modal-overlay {
+  background-color: rgba(0,0,0,0.75);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 8;
+  cursor: pointer;
+}

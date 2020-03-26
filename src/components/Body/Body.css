@@ -16,7 +16,7 @@ a {
   flex-direction: row;
 }
 .Body-log {
-  flex: 1
+  flex: 1;
 }
 .Body-itemInfo {
   flex: 4.9;

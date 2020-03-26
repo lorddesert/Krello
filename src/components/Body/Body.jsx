@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Tasks from '../Tasks/Tasks';
 import Log from '../Log/Log';
 import ItemInfo from '../ItemInfo/ItemInfo';
+import Modal from '../Modal/Modal';
 
 import './Body.css';
 
@@ -10,26 +11,37 @@ export default class Body extends Component {
   state = {
     itemInfo: {
       title: 'my title',
-      body: 'one description'
-    }
+      description: 'one description'
+    },
+    showModal: false
   }
 
   changeState = (item) => {
-    let {title, body} = item[0];
+    let { itemTitle, itemDescription } = item[0];
     this.setState({
       itemInfo : {
-        title, body
+        title: itemTitle,
+        description: itemDescription
       }
     })
-    console.log(this.state);
+  }
+
+  showModal = () => {
+    const modal = document.getElementById('modal');
+    this.setState((state) => ({
+      showModal: !state.showModal
+    }));
+    modal.style.opacity = '1';
+    modal.style.transform = 'translateY(0)';
   }
 
   render(){
     return (
     <div className='Body'>
       <div className='Body-content'>
+        <Modal close={this.closeModal} showModal={this.state.showModal} />
         <div className='Body-log'>
-          <Log changeState={this.changeState} />
+          <Log changeState={this.changeState} toggleShow={this.showModal}  />
         </div>
         <div className='Body-itemInfo'>
           <ItemInfo itemInfo={this.state.itemInfo} />

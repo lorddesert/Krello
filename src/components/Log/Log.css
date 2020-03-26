@@ -8,7 +8,9 @@
   margin: .5em 0;
   padding: .5em;
   color: #00171f;
+  width: 85%;
 }
+
 .Log-items {
   display: flex;
   flex: 1;
@@ -57,22 +59,17 @@
   border-radius: 2px;
   padding: .5em .1em;
 }
-
-.addItem-btn, .addItem-btn button {
+.addItem-btn {
+  color:#666;
+  letter-spacing: 5px;
+  border-radius: 37px;
+  padding: .5em;
+  background: transparent;
+  border: 3px solid #666;
+  box-shadow: 0 0 6px;
+  width:100%;
   flex: 1;
-  margin: auto;
-  padding: .3em;
- 
-}
-.addItem-btn button {
-  width: 100%;
-  border-radius: 15px;
-  background: #efefef;
-  border: 3px #666 solid;
   cursor: pointer;
-}
-.addItem-btn button:hover {
-  background: #c3c3c3;
 }
 
 @media(max-width: 780px) {

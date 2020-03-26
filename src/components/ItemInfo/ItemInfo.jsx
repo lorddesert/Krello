@@ -11,7 +11,7 @@ const ItemInfo = props => {
         {props.itemInfo.title}
       </div>
       <div className="ItemInfo-description">
-        {props.itemInfo.body}
+        {props.itemInfo.description ? props.itemInfo.description : <div>nada</div>}
       </div>
       <div className="ItemInfo-progress">
         <ul>
@@ -24,13 +24,49 @@ const ItemInfo = props => {
 
             }
           </li>
-          <li>
-            <div>
+          <li className='progress-item'>
+            <div style={{display: 'flex', alignItems: 'center'}} >
               <img src={plusImg} alt='plus'></img>
-              <span>asdadasdasdASDAsdASDAS</span>
+              <span>Use justify content: center</span>
             </div>
           </li>
-          <li>---</li>
+          <li className='progress-item'>
+            <div>
+              <img src={plusImg} alt='plus'></img>
+              <span>Paquete de fideos.</span>
+            </div>
+          </li>
+          <li className='progress-item'>
+            <div>
+              <img src={plusImg} alt='plus'></img>
+              <span>Pan?</span>
+            </div>
+          </li>
+          <li className='progress-item'>
+            <div>
+              <img src={plusImg} alt='plus'></img>
+              <span>Lata de tomato-</span>
+            </div>
+          </li>
+          <li className='progress-item'>
+            <div>
+              <img src={plusImg} alt='plus'></img>
+              <span>Harina?</span>
+            </div>
+          </li>
+          <li className='progress-item'>
+            <div>
+              <img src={plusImg} alt='plus'></img>
+              <span>Salchicha x6</span>
+            </div>
+          </li>
+          <li className='progress-item'>
+            <div>
+              <img src={plusImg} alt='plus'></img>
+              <span></span>
+            </div>
+          </li>
+
         </ul>
       </div>
     </div>

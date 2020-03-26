@@ -6,23 +6,23 @@ const Header = () => {
     <div className='Header'>
       <div className='Header-container'>
         <div className='Header-title'>
-          <h1>Date It</h1>
+          <h1><a href='#'>Date It</a></h1>
         </div>
         <div className='Header-sections'>
           <ul>
             <li>
               <div>
-                Tablero
+                Account
               </div>
             </li>
             <li>
               <div>
-                Tablero
+                Calendar
               </div>
             </li>
             <li>
               <div>
-                Tablero
+                About
               </div>
             </li>
           </ul>

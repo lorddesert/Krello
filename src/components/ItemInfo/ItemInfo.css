@@ -5,9 +5,12 @@
   height: 100%;
   border-radius: 7px;
   background: radial-gradient(#fafafa, #f7f7f7);
+  overflow: auto;
 }
 .ItemInfo img {
   width: 1.5%;
+  /* padding-top: .5em; */
+  margin-right: .5em;
 }
 .ItemInfo-title, .ItemInfo-description {
   display: flex;
@@ -29,11 +32,14 @@
   border-radius: 7px;
 }
 .ItemInfo-progress {
-  background: #efefef;;
+  background: #e2e2e2;;
   border-radius: 7px;
   grid-column: 5/26;
-  grid-row: 8/20;
+  grid-row: 8/32;
   padding: .5em;
+}
+.progress-item {
+  margin-bottom: .5em;
 }
 @media(max-width: 780px) {
   .ItemInfo img {
