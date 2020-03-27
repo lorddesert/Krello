@@ -13,7 +13,13 @@ class Modal extends Component {
         </div>
           <div className='Modal-wrapper' id='modal'>
             <div className="Modal-form">
-              <PostForm show={this.props.showModal} />
+              <PostForm
+                show={this.props.showModal}
+                items={this.props.items}
+                setItems={this.props.setItems}
+                db={this.props.db}
+                close={this.props.close}
+              />
             </div>
           </div>
       </div>
