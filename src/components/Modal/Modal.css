@@ -5,7 +5,7 @@
   transition: all 0.4s;
   position: absolute;
   z-index: 8;
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   top: 0;
@@ -14,8 +14,8 @@
   right: 0;
   transform: translateY(-100vh);
   opacity: 0;
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw;
+  height: 80vh; */
 }
 .Modal-wrapper span {
   padding: .5em;

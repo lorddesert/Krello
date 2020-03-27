@@ -35,6 +35,15 @@ export default class Body extends Component {
     modal.style.transform = 'translateY(0)';
   }
 
+  closeModal = () => {
+    const modal = document.getElementById('modal');
+    this.setState((state) => ({
+      showModal: !state.showModal
+    }));
+    modal.style.opacity = '0';
+    modal.style.transform = 'translateY(-100vh)';
+  }
+
   render(){
     return (
     <div className='Body'>
