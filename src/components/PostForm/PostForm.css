@@ -1,0 +1,40 @@
+.PostForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.PostForm input {
+  padding: 1.5em;
+  border-radius: 36px;
+}
+.PostForm-label {
+  margin-bottom: .5em;
+}
+.PostForm-content {
+  padding: 2em;
+  background: #c3c3c3;
+  border-radius: 36px;
+}
+.PostForm-content .Form {
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.PostForm-content .Form button {
+  color:#666;
+  letter-spacing: 5px;
+  border-radius: 37px;
+  padding: 1.5em 2em;
+  background: white;
+  border: 5px solid #666;
+  width:100%;
+  flex: 1;
+  cursor: pointer;
+}
+.PostForm-content .Form button:hover {
+  background: #c3c3c3;
+  color: #000;
+}

@@ -2,6 +2,8 @@
 body {
   color: #000;
   background: radial-gradient(#fafafa, #f7f7f7);
+  margin: 0;
+  padding: 0;
 }
 a {
   color: #00a8e8;

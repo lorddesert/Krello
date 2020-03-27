@@ -13,7 +13,7 @@ export default class Body extends Component {
       title: 'my title',
       description: 'one description'
     },
-    showModal: false
+    showModal: true
   }
 
   changeState = (item) => {
@@ -26,13 +26,14 @@ export default class Body extends Component {
     })
   }
 
-  showModal = () => {
-    const modal = document.getElementById('modal');
+  toggleShow = () => {
     this.setState((state) => ({
       showModal: !state.showModal
     }));
+  }
+  showModal() {
     modal.style.opacity = '1';
-    modal.style.transform = 'translateY(0)';
+    modal.style.transform = 'translateY(0vh)';
   }
 
   closeModal = () => {
@@ -48,9 +49,11 @@ export default class Body extends Component {
     return (
     <div className='Body'>
       <div className='Body-content'>
-        <Modal close={this.closeModal} showModal={this.state.showModal} />
+        {this.state.showModal &&
+          <Modal close={this.closeModal} showModal={this.showModal} />
+        }
         <div className='Body-log'>
-          <Log changeState={this.changeState} toggleShow={this.showModal}  />
+          <Log changeState={this.changeState} toggleShow={this.toggleShow}  />
         </div>
         <div className='Body-itemInfo'>
           <ItemInfo itemInfo={this.state.itemInfo} />
