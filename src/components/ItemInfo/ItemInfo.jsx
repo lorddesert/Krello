@@ -13,7 +13,8 @@ const ItemInfo = props => {
       <div className="ItemInfo-description">
         {props.itemInfo.description ? props.itemInfo.description : <div>nada</div>}
       </div>
-      <div className="ItemInfo-progress">
+      {/* Hide for test the title and desc behavior */}
+      <div className="ItemInfo-progress" style={{display: 'none'}}>
         <ul>
           <li>
             {/*
