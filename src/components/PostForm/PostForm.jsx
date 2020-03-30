@@ -31,13 +31,17 @@ class PostForm extends Component {
           <div className='PostForm-content'>
             <div className='Form'>
               <div className='PostForm-label'>
+                <h2>Add Item</h2>
+                </div>
+              <div className='PostForm-label'>
                 <label>
                   <input type='text' placeholder='Write a title' name='title' ref={this.title} />
                 </label>
               </div>
               <div className='PostForm-label'>
                 <label>
-                  <input type='text' placeholder='Write a description' name='description' ref={this.desc} />
+                  <input type='text-area' placeholder='Write a description' name='description' ref={this.desc} />
+                  {/* <textarea placeholder='Write a description' ref={this.desc} name='description' id="" cols="25" rows="5"></textarea> */}
                 </label>
               </div>
               <div className='PostForm-label'>

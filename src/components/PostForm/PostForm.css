@@ -11,6 +11,11 @@
 .PostForm-label {
   margin-bottom: .5em;
 }
+.PostForm-label h2 {
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+  margin-bottom: .5em;
+}
 .PostForm-content {
   padding: 2em;
   background: #c3c3c3;
