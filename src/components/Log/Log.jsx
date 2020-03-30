@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
+
 import './Log.css';
+import deleteImg from '../../styles/images/delete.png';
 
 import itemIcon from './resources/itemIcon.png';
 
 export default class Log extends Component {
+
+  state = {
+    showDel: false
+  }
 
   inputItem = React.createRef();
 
@@ -20,6 +26,20 @@ export default class Log extends Component {
   }
 
   componentDidMount () {
+    document.addEventListener('mouseover', (e) => {
+      // console.log(e)
+     if(e.target.parentNode.className == 'Log-item') {
+      //  this.setState({showDel: true})
+      console.log(1);
+     }
+    })
+    const logItems = document.getElementsByClassName('Log-item');
+    console.log(logItems)
+    for(let i = 0; i < logItems.length; i++) {
+      console.log(logItems[i]);
+      logItems[i].addEventListener('mouseover', () => {console.log('asdasd')})
+    }
+    // let newLogItems = logItems.map((item) => item);
     const { items } = this.props;
     this.props.db.on('child_added', snap => {
       items.push({
@@ -50,6 +70,7 @@ export default class Log extends Component {
       });
   }
 
+  /* This can be deleted, and put the function in the onClick */
   addItem = () => {
     this.props.toggleShow();
   }
@@ -71,8 +92,16 @@ export default class Log extends Component {
                           <span>{i+1}</span>
                         </div>
                         <div className="Log-item-title">
-                        <span>{item.itemTitle}</span>
+                          <span>{item.itemTitle}</span>
                         </div>
+                        {this.state.showDel &&
+                          <div className='Log-item-del'>
+                            <div>
+                              <img src={deleteImg} >
+                              </img>
+                            </div>
+                          </div>
+                        }
                       </li>
                     </div>
                   ))
