@@ -17,13 +17,6 @@
   width: 100vw;
   height: 0;
 }
-.Modal-wrapper span {
-  padding: .5em;
-  background: #ef7245;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-}
 .Modal-overlay {
   background-color: rgba(0,0,0,0.75);
   position: fixed;
