@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // Components
-import Tasks from '../Tasks/Tasks';
+// import Tasks from '../Tasks/Tasks';
 import Log from '../Log/Log';
 import ItemInfo from '../ItemInfo/ItemInfo';
 import Modal from '../Modal/Modal';
@@ -17,7 +17,7 @@ export default class Body extends Component {
       title: 'my title',
       description: 'one description'
     },
-    showModal: true
+    showModal: false
   }
 
   app = !firebase.apps.length ? firebase.initializeApp(DB_CONFIG) : firebase.app();
