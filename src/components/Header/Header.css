@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Lobster&display=swap');
 
 .Header {
-  color: #fff;
-  background: black;
+  color:black;
+  background: #bdc3c7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #efefef, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #efefef, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+  border-bottom: solid 3px black;
+}
+.Header-title a{
+  color: inherit;
+  text-decoration: none;
 }
 .Header-container {
   display: flex;
@@ -13,6 +20,13 @@
 .Header-sections {
   margin-left: 16vw;
   font-family: 'Lato', Arial, Helvetica, sans-serif;
+}
+.Header-sections li {
+  display: flex;
+  align-items: flex-end;
+  padding: .5em;
+  margin-right: .5em;
+  font-size: 1.5em;
 }
 .Header-sections ul {
   display: flex;

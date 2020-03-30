@@ -8,7 +8,7 @@ const Header = () => {
         <div className='Header-title'>
           <h1><a href='#'>Date It</a></h1>
         </div>
-        <div className='Header-sections'>
+        {/* <div className='Header-sections'>
           <ul>
             <li>
               <div>
@@ -26,7 +26,7 @@ const Header = () => {
               </div>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </div>
   );
