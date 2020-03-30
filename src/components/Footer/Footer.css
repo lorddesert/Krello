@@ -1,5 +1,5 @@
 .Footer {
-  background: #00171f;
+  background: #272727;
   color: #fff;
   font-family: 'Lato', sans-serif;
   padding: 5px;
@@ -8,5 +8,5 @@
 }
 .Footer-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
