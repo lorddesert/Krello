@@ -40,8 +40,8 @@ class PostForm extends Component {
               </div>
               <div className='PostForm-label'>
                 <label>
-                  <input type='text-area' placeholder='Write a description' name='description' ref={this.desc} />
-                  {/* <textarea placeholder='Write a description' ref={this.desc} name='description' id="" cols="25" rows="5"></textarea> */}
+                  {/* <input type='text' placeholder='Write a description' name='description' ref={this.desc} /> */}
+                  <textarea placeholder='Write a description' ref={this.desc} name='description' id="" cols="25" rows="5"></textarea>
                 </label>
               </div>
               <div className='PostForm-label'>
