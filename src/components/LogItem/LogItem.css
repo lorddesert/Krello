@@ -1,0 +1,66 @@
+.Log-items {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.Log-item-title {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-right: 5px;
+}
+.Log-item li {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select:none;
+  display: flex;
+  flex-direction: row;
+  padding: .6em;
+  border-bottom: 3px #999999 solid;
+  min-height: 28px;
+  max-height: 35px;
+  overflow: hidden;
+}
+.Log-item li:hover {
+  /* background: #c3c3c3; */
+}
+.Log-item-id {
+  font-weight: bold;
+  padding: 0 .5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Log-item-id img {
+  /* width: 10px;
+  height: 10px; */
+  padding: .3em .5em 0 0;
+}
+.Log-item-del {
+  box-shadow: #e8e8e8 -5px 0 5px ;
+}
+.Log-item-del,.Log-item-del div {
+  /* left: 6vw;
+  top: auto 10em; */
+  display: flex;
+  align-items: center;
+  width: 25px;
+}
+.Log-item-del div {
+  justify-content: center;
+  height: 25px;
+  /* background: #e8e8e8; */
+  background: linear-gradient(#e8e8e8, #cacaca);
+  border: 1px solid #cacaca;
+  border-radius: 50%;
+}
+.Log-item-del div:hover {
+  background: linear-gradient(#c0c0c0, #a8a8a8);
+}
+.Log-item-del img {
+  width: 15px;
+  height: 15px;
+}
