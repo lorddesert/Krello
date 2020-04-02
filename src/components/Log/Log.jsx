@@ -1,44 +1,16 @@
 import React, { Component } from 'react';
 
 import './Log.css';
-import deleteImg from '../../styles/images/delete.png';
 
-import itemIcon from './resources/itemIcon.png';
+import LogItem from '../LogItem/LogItem';
 
 export default class Log extends Component {
 
-  state = {
-    showDel: false
-  }
-
-  inputItem = React.createRef();
-
-  handleClick = e => {
-    e.persist();
-    if(e.target.childNodes.length > 1) {
-      let item = this.props.items.filter(item => item.itemTitle == e.target.childNodes[1].textContent);
-      this.props.changeState(item);
-    }
-    else {
-      let item = this.props.items.filter(item => item.itemTitle == e.target.childNodes[0].textContent);
-      this.props.changeState(item);
-    }
-  }
-
   componentDidMount () {
-    document.addEventListener('mouseover', (e) => {
-      // console.log(e)
-     if(e.target.parentNode.className == 'Log-item') {
-      //  this.setState({showDel: true})
-      console.log(1);
-     }
-    })
-    const logItems = document.getElementsByClassName('Log-item');
-    console.log(logItems)
-    for(let i = 0; i < logItems.length; i++) {
-      console.log(logItems[i]);
-      logItems[i].addEventListener('mouseover', () => {console.log('asdasd')})
-    }
+    // document.addEventListener('mouseover', e => {
+    //   // console.log(e.target.parentNode.__reactInternalInstance$trvspwv2y3.key);
+    //   console.log(e.target.parentNode);
+    // })
     // let newLogItems = logItems.map((item) => item);
     const { items } = this.props;
     this.props.db.on('child_added', snap => {
@@ -47,7 +19,6 @@ export default class Log extends Component {
         itemTitle: snap.val().itemTitle,
         itemDescription: snap.val().itemDescription
         })
-        /* change */
         this.props.setItems(items);
       });
     //Listening for an change on an item/child of the item.
@@ -57,7 +28,6 @@ export default class Log extends Component {
           items[i].itemTitle = snap.val().itemTitle;
           items[i].itemDescription = snap.val().itemDescription;
         }
-        /* change */
         this.props.setItems(items);
       });
     //Listening for removed items
@@ -82,29 +52,13 @@ export default class Log extends Component {
           <div className='Log-items'>
               <ul>
                 {this.props.items[0] ?
-                  this.props.items.map((item, i) => (
-                    <div className='Log-item' key={`item-${i}`}>
-                      <li onClick={this.handleClick}>
-                        <div className="Log-item-id" >
-                          <div>
-                            <img src={itemIcon} width='15px'></img>
-                          </div>
-                          <span>{i+1}</span>
-                        </div>
-                        <div className="Log-item-title">
-                          <span>{item.itemTitle}</span>
-                        </div>
-                        {this.state.showDel &&
-                          <div className='Log-item-del'>
-                            <div>
-                              <img src={deleteImg} >
-                              </img>
-                            </div>
-                          </div>
-                        }
-                      </li>
-                    </div>
-                  ))
+                    this.props.items.map((item, i) => <LogItem
+                    item={item}
+                    i={i}
+                    key={`item-${i}`}
+                    changeState={this.props.changeState}
+                    items={this.props.items}
+                    />)
                   :
                   <div>
                     <span style={{fontSize: '1.3em', letterSpacing: '.1em'}}>Cargando...</span>
@@ -119,12 +73,6 @@ export default class Log extends Component {
                     Add task
                   </button>
                 </div>
-                {/* <div className='addItem-input'>
-                  <input type='text' placeholder='New Item' ref={this.inputItem} autoFocus></input>
-                </div>
-                <div className='addItem-btn'>
-                  <button onClick={this.addItem}>Add</button>
-                </div> */}
               </div>
               </ul>
           </div>
