@@ -14,8 +14,8 @@ export default class Body extends Component {
   state = {
     items: [],
     itemInfo: {
-      title: 'my title',
-      description: 'one description'
+      title: 'Title',
+      description: 'Description'
     },
     showModal: false
   }
@@ -104,10 +104,10 @@ export default class Body extends Component {
           />
         }
         <div className='Body-log'>
-          <Log 
+          <Log
             changeState={this.changeState}
             toggleShow={this.toggleShow}
-            db={this.db} 
+            db={this.db}
             items={this.state.items}
             setItems={this.setItems}
           />
