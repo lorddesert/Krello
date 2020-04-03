@@ -52,12 +52,15 @@ export default class Log extends Component {
           <div className='Log-items'>
               <ul>
                 {this.props.items[0] ?
-                    this.props.items.map((item, i) => <LogItem
-                    item={item}
-                    i={i}
-                    key={`item-${i}`}
-                    changeState={this.props.changeState}
-                    items={this.props.items}
+                    this.props.items.map((item, i) =>
+                    <LogItem
+                      db={this.props.db}
+                      item={item}
+                      i={i}
+                      key={`item-${i}`}
+                      changeState={this.props.changeState}
+                      items={this.props.items}
+                      removeItem={this.props.removeItem}
                     />)
                   :
                   <div>
