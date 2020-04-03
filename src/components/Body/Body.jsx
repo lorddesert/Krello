@@ -60,6 +60,13 @@ export default class Body extends Component {
     }));
   }
 
+  removeItem = ref => {
+    ref.remove()
+    .then(() => {
+      alert('item removed');
+    })
+  }
+
   componentDidMount() {
     // const { items } = this.state;
     // this.db.on('child_added', snap => {
@@ -110,6 +117,7 @@ export default class Body extends Component {
             db={this.db}
             items={this.state.items}
             setItems={this.setItems}
+            removeItem={this.removeItem}
           />
         </div>
         <div className='Body-itemInfo'>
