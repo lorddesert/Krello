@@ -1,7 +1,7 @@
 {
   "name": "krello",
-  "version": "0.0.1",
-  "description": "An organization app, based in items-comments-progress for your day by day!",
+  "version": "1.1.0",
+  "description": "A list-based app for documentation of my other apps",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
